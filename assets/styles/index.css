@@ -17,6 +17,7 @@ body {
     margin-inline: auto;
     display: flex;
     justify-content: space-around;
+    position: fixed;
 }
 
 .navbar-container .logo h3 {
@@ -58,7 +59,7 @@ main {
 }
 
 .jumbotron {
-    margin-top: 10vh;
+    margin-top: 20vh;
     flex: 1;
     display: flex;
     align-items: center;
@@ -79,13 +80,13 @@ main {
 }
 
 .jumbotron .jumbotron-description p {
-    line-height: 1rem;
     font-size: 1.2rem;
+    margin-block: 1rem;
 }
 
 .jumbotron .jumbotron-description a {
     padding: .5rem 2.5rem;
-    margin-block-start: 1rem;
+    margin-block: 1rem;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1rem;
@@ -160,7 +161,7 @@ main {
     padding: 20px;
     justify-content: space-around;
     margin: 1rem;
-    width: 33.3%;
+    width: 100%;
     transition: all .15s ease-in-out;
 }
 
@@ -235,4 +236,58 @@ footer {
     padding: 20px;
     text-align: center;
     font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+    }
+
+    .navbar-container h3 {
+        text-align: center;
+    }
+
+    .navbar-container .nav-list ul {
+        flex-wrap: wrap;
+        column-gap: .5rem;
+    }
+
+    .jumbotron {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .jumbotron .jumbotron-description h1 {
+        font-size: 3rem;
+    }
+    
+    .jumbotron .jumbotron-description h3 {
+        font-size: 2rem;
+    }
+    
+    .jumbotron .jumbotron-description p {
+        font-size: 1rem;
+    }
+
+    .jumbotron .jumbotron-image {
+        order: -1;
+    }
+
+    .card {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .contact ul {
+        flex-direction: column;
+        text-align: center;
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .card {
+        flex-direction: column;
+        gap: 2rem;
+    }
 }
